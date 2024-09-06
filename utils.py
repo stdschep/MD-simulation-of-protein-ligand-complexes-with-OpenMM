@@ -1,6 +1,7 @@
 
 import os, sys, time, re
 # Find the user ID 
+cwd = os.getcdw()
 id = re.search(r'/[0-9]*/vsc[0-9]*/',cwd)
 # insert user ID in path
 path = path = 'data/gent'+id.group()+'python_lib/lib/python3.10/site-packages'
