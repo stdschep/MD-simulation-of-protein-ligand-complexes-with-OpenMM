@@ -13,7 +13,8 @@ t0 = time.time()
 sys_setup = 0
 disclaimer = \
 "***********************************************************************************************************\n\
-* Script made by Stijn De Schepper, as part of the master thesis 2024 at the UGent-PRU research group.    *\n\
+* Script made by Stijn De Schepper, as part of the master thesis 2024 at the UGent-PRU research group     *\n\
+* and available at https://github.com/stdschep/MD-simulation-of-protein-ligand-complexes-with-OpenMM.git. *\n\
 *                                                                                                         *\n\
 * Please cite following papers:                                                                           *\n\
 * 1. Dudgeon, T. & Chodera, J.                                                                            *\n\
