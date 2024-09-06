@@ -1,6 +1,10 @@
 
-import os, sys, time
-sys.path.append('/data/gent/473/vsc47370/python_lib/lib/python3.10/site-packages')
+import os, sys, time, re
+# Find the user ID 
+id = re.search(r'/[0-9]*/vsc[0-9]*/',cwd)
+# insert user ID in path
+path = path = 'data/gent'+id.group()+'python_lib/lib/python3.10/site-packages'
+sys.path.append(path)
 
 from openff.toolkit import Molecule
 from openmmforcefields.generators import SystemGenerator
