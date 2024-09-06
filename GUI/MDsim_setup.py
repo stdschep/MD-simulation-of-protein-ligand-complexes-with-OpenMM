@@ -14,9 +14,9 @@ def filepath():
     # Get the curent working directory
     cdw = os.getcwd()
     # Find the user ID 
-    m = re.search(r'/[0-9]*/vsc[0-9]*/',cwd)
-    # 
-    path = 'data/gent'+m.group()+'python_lib/lib/python3.10/site-packages/openmmforcefields/ffxml/amber'
+    id = re.search(r'/[0-9]*/vsc[0-9]*/',cwd)
+    # insert user ID in path
+    path = 'data/gent'+id.group()+'python_lib/lib/python3.10/site-packages/openmmforcefields/ffxml/amber'
     return os.listdir(path)
 class PageOne(wx.Panel):
     def __init__(self, parent):
