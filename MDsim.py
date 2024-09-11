@@ -31,14 +31,14 @@ disclaimer = \
 * Biophysical Journal 109, 1528–1532 (2015).                                                              *\n\
 ***********************************************************************************************************\n"
 
-parser = argparse.ArgumentParser(description=disclaimer, fromfile_prefix_chars='@')
+parser = argparse.ArgumentParser(description='Handeling of parameter input, fromfile_prefix_chars='@')
 
 
 parser.add_argument("-a", "--simulation", required=True,
                     choices=["Protein", "Complex"],
                     help="What simulation do you want to run.")
 parser.add_argument("-p", "--protein", help="Protein PDB file")
-parser.add_argument("-l", "--ligand", required='--simulation' == 'Complex', help="Ligand mol file")
+parser.add_argument("-l", "--ligand", help="Ligand mol file")
 parser.add_argument("-c", "--complex", help='Load a previous assembled complex')
 parser.add_argument("-s", "--system", default=None, help='Load a previous configured system')
 parser.add_argument("-o", "--output", required=True, help="Base name for output files")
@@ -81,7 +81,10 @@ print(disclaimer)
 print("Run MD simulation with: ", args)
 print("*"*107)
 
-restrain = args.restrain.split(',')
+if args.restrain:
+    restrain = args.restrain.split(',')
+else:
+    restrain = args.restrain
 bounding = args.custom_bond
 num_steps = args.steps
 step_size = args.step_size * unit.picoseconds
