@@ -20,7 +20,7 @@ MDsim.py and untils.py are depended on:
 * [openmmforcefields](https://github.com/openmm/openmmforcefields/tree/main)
 * [openfftoolkit](https://github.com/openforcefield/openff-toolkit/tree/main)
 
-The simulation parameter (-a) differentiates between proteins and protein ligand complexes. Below shows the essential parameter for each case, observe the capital in **P**rotein and **C**omplex! The protein must be written in pdb format, while the ligand must be in MOL or SDF fomat. Output (-o) is used to name the outputted files.
+The simulation parameter (-a) differentiates between proteins and protein ligand complexes. The code below shows the essential parameter for each case (observe the capital in **P**rotein and **C**omplex!) The protein must be written in pdb format, while the ligand must be in MOL or SDF fomat. Output (-o) is used to name the outputted files.
 ```
 $ python MDsim.py -a Protein -p protein.pdb -o output 
 ```
