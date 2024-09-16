@@ -420,7 +420,6 @@ class PageTwo(wx.Panel):
         list = atomlist.GetValue() + f'{a1}-{a2}\n'
         atomlist.SetValue(list)
         output.update({para:list.rstrip('\n').replace('\n',',')})
-        print(output)
 
     def ButReset(self,e):
         event = e.GetEventObject() # identify the clicked button
