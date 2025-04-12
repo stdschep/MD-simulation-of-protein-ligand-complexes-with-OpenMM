@@ -114,16 +114,16 @@ optional arguments:
   -n RENUMBER, --renumber RENUMBER
                         Renumber the protein (provide desired first number)
 ```
-This requires the trajectory to be written out using the DCD reporter. The topology can be read from the minimised
+This requires the trajectory to be written using the DCD reporter. The topology can be read from the minimised
 starting point of the MD run.
 
 The trajectory is  re-imaged so that the ligand and protein are in the correct location with respect to eachother (the periodic
-box can cause some wierd visual aberations), and the waters, ions etc. removed if required (-r).
+box can cause some weird visual aberations), and the waters, ions etc. removed if required (-r).
 
 The RMSD of the ligand and the protein C-alpha atoms compared to the start of the trajectory are displayed in a chart
 that is generated using [Plotly](https://plotly.com/graphing-libraries/) with the name output.svg/output.html.
 
-For complexes that are stable the RMSDs should not change dramatically. For a complex that is unstable the ligand may 
+For complexes that are stable the RMSDs should not change dramatically. For a unstable complex the ligand may 
 detach from the protein and the RMSD will increase dramatically. Relatively long simulations will be needed, maybe in the 
 order of 100s of ns.
 
